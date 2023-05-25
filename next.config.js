@@ -15,15 +15,19 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/pages/6ca2dd5e-2214-4873-8ffa-d634d8ebbb53',
+        destination: '/pages/0b13e1e97b2f4868ac4e2e44e6873ad0',
+      },
+      {
+        source: '/mongsiltour',
+        destination: '/pages/08fe6e5ec9e84a2ab515a79799962ac4',
       },
     ];
   },
   env: {},
   publicRuntimeConfig: {
-    rootNotionPageId: '6ca2dd5e-2214-4873-8ffa-d634d8ebbb53',
-    rootNotionSpaceId: 'f2b37586-33c0-4236-bab4-a87c12f0d6e9',
-    gaTraceId: 'G-HDWXJVK15N',
+    rootNotionPageId: '0b13e1e97b2f4868ac4e2e44e6873ad0',
+    rootNotionSpaceId: 'eb3b7133-dcdd-4332-a932-aaf5cd3a0c02',
+    gaTraceId: 'G-1QLKVVZ1G7',
     pageIdsThatHaveThumnail,
   },
 };

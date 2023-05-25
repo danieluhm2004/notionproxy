@@ -167,13 +167,13 @@ export default function NotionPage({ recordMap }) {
   const { publicRuntimeConfig } = getConfig();
   const hasThumbnail: boolean =
     publicRuntimeConfig?.pageIdsThatHaveThumnail?.includes(pageId);
-  const imageUrl = `https://taeho.io/images/thumbnails/pages/${pageId}.png`;
+  const imageUrl = `https://dan.al/images/thumbnails/pages/${pageId}.png`;
 
   const pageInfo = getPageInfo(recordMap);
 
   const childrenOfHead = (
     <>
-      <title>{`${pageInfo.title} | TAEHO.IO`}</title>
+      <title>{`${pageInfo.title} | DAN.AL`}</title>
       <meta property="og:title" content={pageInfo.titleWithIcon} />
       <meta property="og:description" content={pageInfo.description} />
       {hasThumbnail && <meta property="og:image" content={imageUrl} />}
@@ -194,7 +194,7 @@ export default function NotionPage({ recordMap }) {
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
-        darkMode={true}
+        darkMode={false}
         mapPageUrl={(path: string) => '/pages/' + path}
         isImageZoomable={true}
         previewImages={true}
@@ -205,14 +205,6 @@ export default function NotionPage({ recordMap }) {
           Code,
         }}
       />
-
-      {pageId !== publicRuntimeConfig.rootNotionPageId && (
-        <UtterancesComments
-          repo="taehoio/notionproxy-utterances"
-          issueTerm="pathname"
-          theme="github-dark"
-        />
-      )}
     </>
   );
 }
